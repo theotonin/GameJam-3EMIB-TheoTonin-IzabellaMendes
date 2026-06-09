@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 		pulos += 1
 		puloGeral += 1
 	# Get the input direction and handle the movement/deceleration.
-	#var direction := Input.get_axis("left", "right")
 	var direction = 1 
 	
 	# Inverte o sprite
