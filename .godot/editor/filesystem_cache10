@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780999892
+::res://::1781000185
 ::res://assets/::1780918864
 license.txt::TextFile::-1::1780915396::0::1::::<><><>0<>0<><>::
 preview.png::CompressedTexture2D::6973116348727534106::1780915396::1780915429::1::::<><><>0<>0<>56d4e73b79c643373e6a9227cd7af0d3<>res://.godot/imported/preview.png-a680f03a9d5180282694828f1a21451f.ctex::
@@ -1037,8 +1037,9 @@ wireLeft.png::CompressedTexture2D::7311287744133584034::1780915396::1780915429::
 wireRight.png::CompressedTexture2D::808305401657091583::1780915396::1780915429::1::::<><><>0<>0<>9f032ded5da1d63c6c21505e3eba5ac5<>res://.godot/imported/wireRight.png-4324a3ffd29f81526a400b1d33ac6007.ctex::
 ::res://assets/Request pack/Vector/::1780915430
 sheet.svg::CompressedTexture2D::6512843278316563265::1780915396::1780915430::1::::<><><>0<>0<>e1d5d00cd95eecbc227a8c4c85bc3672<>res://.godot/imported/sheet.svg-a3b09dda9488520f7867fe08e6c72c6d.ctex::
-::res://scenes/::1780922412
-level_1.tscn::PackedScene::1932053680119006775::1780922412::0::1::::<><><>0<>0<><>::uid://cu8tb6g7haskd::::res://scenes/player.tscn<>uid://cxyvvt8i0t7vg::::res://assets/Base pack/bg.png<>uid://bdjg24vr6wdgs::::res://assets/Base pack/Tiles/tiles_spritesheet.png
+::res://scenes/::1781001255
+level_1.tscn::PackedScene::1932053680119006775::1781001255::0::1::::<><><>0<>0<><>::uid://cu8tb6g7haskd::::res://scenes/player.tscn<>uid://cxyvvt8i0t7vg::::res://assets/Base pack/bg.png<>uid://bdjg24vr6wdgs::::res://assets/Base pack/Tiles/tiles_spritesheet.png
 player.tscn::PackedScene::6245899753643280143::1780999939::0::1::::<><><>0<>0<><>::uid://cw5grhe38k24m::::res://assets/Base pack/Player/p1_front.png<>uid://c3hd7fiifdfre::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk01.png<>uid://11yoag3gtdxu::::res://assets/Base pack/Player/p1_jump.png<>uid://ct3m01v0vyotl::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk02.png<>uid://i8xvjm4xw3y4::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk03.png<>uid://cyr6bxxhj5rwl::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk04.png<>uid://xdfp6wojtiqf::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk05.png<>uid://bfwi1ghg8glxf::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk06.png<>uid://bgs3d55jcnaqi::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk07.png<>uid://drtpt4isef364::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk08.png<>uid://cqv2km5kolyl1::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk09.png<>uid://bglow26vl5h86::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk10.png<>uid://colfmmenrdtl2::::res://assets/Base pack/Player/p1_walk/PNG/p1_walk11.png
-::res://scripts/::1780917972
-scriptPlayer.gd::GDScript::7022276725593418198::1780999948::0::1::::<>CharacterBody2D<><>0<>0<><>::
+plataforma.tscn::PackedScene::3896908122185028774::1781006700::0::1::::<><><>0<>0<><>::uid://v6d5otewsi8v::::res://assets/Base pack/Tiles/grassMid.png
+::res://scripts/::1781000320
+scriptPlayer.gd::GDScript::7022276725593418198::1781000320::0::1::::<>CharacterBody2D<><>0<>0<><>::

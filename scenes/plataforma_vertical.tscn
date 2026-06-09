@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://djvwnnw6chjop"]
+
+[ext_resource type="Texture2D" uid="uid://ofee03b7yhq1" path="res://assets/Base pack/Tiles/boxAlt.png" id="1_owjcj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owjcj"]
+size = Vector2(70, 206)
+
+[node name="plataformaVertical" type="AnimatableBody2D" unique_id=1400518943]
+
+[node name="plataforma" type="Node2D" parent="." unique_id=1211891876]
+
+[node name="Sprite2D2" type="Sprite2D" parent="plataforma" unique_id=1521397249]
+position = Vector2(35, -101)
+rotation = -1.5707964
+texture = ExtResource("1_owjcj")
+
+[node name="Sprite2D3" type="Sprite2D" parent="plataforma" unique_id=1360811635]
+position = Vector2(35, -33)
+rotation = -1.5707964
+texture = ExtResource("1_owjcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="plataforma" unique_id=736566506]
+position = Vector2(35, 35)
+rotation = 4.712389
+texture = ExtResource("1_owjcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=357917284]
+position = Vector2(35, -34)
+shape = SubResource("RectangleShape2D_owjcj")
