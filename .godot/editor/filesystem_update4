@@ -1,5 +1,2 @@
-res://scenes/player.tscn
-res://scripts/scriptPlayer.gd
 res://scenes/level_1.tscn
-res://scenes/plataforma.tscn
-res://scenes/plataforma_vertical.tscn
+res://scenes/player.tscn
