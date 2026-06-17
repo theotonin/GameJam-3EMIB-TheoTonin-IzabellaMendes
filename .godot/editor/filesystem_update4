@@ -1,2 +1,8 @@
+res://killzone.gd
 res://scenes/level_1.tscn
-res://scenes/player.tscn
+res://scenes/killzone.tscn
+res://scripts/scriptPlayer.gd
+res://scenes/obstaculos.tscn
+res://scenes/obstaculo.tscn
+res://scenes/obstaculo_medio.tscn
+res://scenes/obstaculo_dificil.tscn
