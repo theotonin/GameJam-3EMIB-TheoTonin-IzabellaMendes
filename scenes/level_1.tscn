@@ -10,7 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://c6qtuacpyruxd" path="res://assets/Mushroom expansion/PNG/spritesheet.png" id="6_15mv3"]
 [ext_resource type="Texture2D" uid="uid://bebwlm8ul457m" path="res://assets/Base pack/HUD/hud_spritesheet.png" id="7_e3sih"]
 [ext_resource type="Texture2D" uid="uid://60llerpa3e4c" path="res://assets/Base pack/Items/items_spritesheet.png" id="8_2y5yt"]
-[ext_resource type="PackedScene" uid="uid://ccrrp8216ti8y" path="res://scenes/obstaculo.tscn" id="10_2os1m"]
+[ext_resource type="PackedScene" uid="uid://85p4tn3aut50" path="res://scenes/obstaculo_facil.tscn" id="8_go7sj"]
+[ext_resource type="PackedScene" uid="uid://bv8d3rbt2lhm8" path="res://scenes/obstaculo_medio.tscn" id="9_7gny6"]
+[ext_resource type="PackedScene" uid="uid://u4ih72v8463n" path="res://scenes/obstaculo_dificil.tscn" id="10_7gny6"]
+[ext_resource type="PackedScene" uid="uid://wlyrklubgmdf" path="res://scenes/powerup.tscn" id="12_2aecg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xbjy"]
 texture = ExtResource("2_rus8k")
@@ -4870,10 +4873,10 @@ z_index = 1
 
 [node name="TextureRect" type="TextureRect" parent="Tilemap + fundo" unique_id=1647122806]
 modulate = Color(0.85998476, 0.8817679, 0.8853985, 1)
-offset_left = -2608.0
-offset_top = -1608.0
-offset_right = 9584.0
-offset_bottom = 942.0
+offset_left = -2546.0
+offset_top = -1604.0
+offset_right = 9646.0
+offset_bottom = 946.0
 texture = ExtResource("2_5xbjy")
 
 [node name="chao" type="TileMapLayer" parent="Tilemap + fundo" unique_id=1807027565]
@@ -4903,31 +4906,82 @@ offset_bottom = -56.0
 text = "Apenas pule para vencer, se bater, finge que deu game over"
 
 [node name="Obstaculos" type="Node2D" parent="." unique_id=538136362]
-
-[node name="obstaculo" parent="Obstaculos" unique_id=1315814266 instance=ExtResource("10_2os1m")]
 z_index = 2
 
-[node name="obstaculo2" parent="Obstaculos" unique_id=1342933150 instance=ExtResource("10_2os1m")]
+[node name="obstaculoFacil" parent="Obstaculos" unique_id=1315814266 instance=ExtResource("8_go7sj")]
+position = Vector2(-80, 33)
+
+[node name="obstaculoFacil2" parent="Obstaculos" unique_id=284725221 instance=ExtResource("8_go7sj")]
+position = Vector2(618, -161)
+
+[node name="obstaculoFacil3" parent="Obstaculos" unique_id=1412911700 instance=ExtResource("8_go7sj")]
+position = Vector2(1288, -273)
+
+[node name="obstaculoMedio" parent="Obstaculos" unique_id=872710052 instance=ExtResource("9_7gny6")]
+position = Vector2(2300, -73)
+
+[node name="obstaculoMedio2" parent="Obstaculos" unique_id=695556323 instance=ExtResource("9_7gny6")]
+position = Vector2(3120, -165)
+
+[node name="obstaculoMedio3" parent="Obstaculos" unique_id=433076231 instance=ExtResource("9_7gny6")]
+position = Vector2(3823, -306)
+
+[node name="obstaculoDificil" parent="Obstaculos" unique_id=593569447 instance=ExtResource("10_7gny6")]
+position = Vector2(4720, -100)
+
+[node name="obstaculoDificil2" parent="Obstaculos" unique_id=81915906 instance=ExtResource("10_7gny6")]
+position = Vector2(5409, -213)
+
+[node name="obstaculoDificil3" parent="Obstaculos" unique_id=875606003 instance=ExtResource("10_7gny6")]
+position = Vector2(6366, -322)
+
+[node name="Coins e powerups" type="Node2D" parent="." unique_id=50263493]
 z_index = 2
-position = Vector2(610, -173)
 
-[node name="obstaculo3" parent="Obstaculos" unique_id=1514051633 instance=ExtResource("10_2os1m")]
-z_index = 2
-position = Vector2(1288, -263)
-
-[node name="Coins" type="Node2D" parent="." unique_id=50263493]
-
-[node name="coin" parent="Coins" unique_id=1778335133 instance=ExtResource("2_e3sih")]
+[node name="coin" parent="Coins e powerups" unique_id=1778335133 instance=ExtResource("2_e3sih")]
 z_index = 5
 position = Vector2(-67, -30)
 
-[node name="coin2" parent="Coins" unique_id=997780482 instance=ExtResource("2_e3sih")]
+[node name="coin2" parent="Coins e powerups" unique_id=997780482 instance=ExtResource("2_e3sih")]
 z_index = 5
 position = Vector2(692, -341)
 
+[node name="coin3" parent="Coins e powerups" unique_id=792283548 instance=ExtResource("2_e3sih")]
+z_index = 5
+position = Vector2(1072, -77)
+
+[node name="coin4" parent="Coins e powerups" unique_id=1086499678 instance=ExtResource("2_e3sih")]
+z_index = 5
+position = Vector2(1961, -516)
+
+[node name="coin5" parent="Coins e powerups" unique_id=717905037 instance=ExtResource("2_e3sih")]
+z_index = 5
+position = Vector2(2708, -271)
+
+[node name="coin6" parent="Coins e powerups" unique_id=924181018 instance=ExtResource("2_e3sih")]
+z_index = 5
+position = Vector2(3779, -404)
+
+[node name="coin7" parent="Coins e powerups" unique_id=555975680 instance=ExtResource("2_e3sih")]
+z_index = 5
+position = Vector2(4491, -18)
+
+[node name="coin8" parent="Coins e powerups" unique_id=16478323 instance=ExtResource("2_e3sih")]
+z_index = 5
+position = Vector2(5245, -225)
+
+[node name="coin9" parent="Coins e powerups" unique_id=547176395 instance=ExtResource("2_e3sih")]
+z_index = 5
+position = Vector2(6045, -78)
+
+[node name="powerup" parent="Coins e powerups" unique_id=795584862 instance=ExtResource("12_2aecg")]
+position = Vector2(-691, 26)
+
 [node name="Plataformas" type="Node2D" parent="." unique_id=1068780969]
+z_index = 2
 
 [node name="plataformaVertical" parent="Plataformas" unique_id=1400518943 instance=ExtResource("4_4nkto")]
+z_index = 2
 position = Vector2(1954, -6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/plataformaVertical" unique_id=1191090612]
@@ -4935,6 +4989,7 @@ libraries/ = SubResource("AnimationLibrary_e3sih")
 autoplay = &"moving up and down"
 
 [node name="plataforma" parent="Plataformas" unique_id=708996405 instance=ExtResource("4_5xbjy")]
+z_index = 2
 position = Vector2(7910, 71)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/plataforma" unique_id=290641404]

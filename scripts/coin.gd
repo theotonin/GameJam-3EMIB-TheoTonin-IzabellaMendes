@@ -2,20 +2,22 @@ extends Area2D
 # Novo sinal criado (é possível criar um sinal caso os sinais padrões da Godot
 # não tenham o que precisamos
 signal collected
-# Quando uma moeda for criada na tela, o sinal body_entered
-# (sinal emitido automaticamente quando um corpo físico entra na área do nó Area2D)
-# é conectado à função on_body_entered
+
+@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var particulas: GPUParticles2D = $Particulas
+
 func _ready():
 	body_entered.connect(_on_body_entered)
 # Toda vez que um corpo entra na Area2D, a função _on_body_entered recebe
 # automaticamente como parâmetro o nó que entrou nessa área, representado
 # pelo body
-func _on_body_entered(body):
-# Se o nome do nó que entrou na área for Player, execute as ações
+func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
- 	# printe no console "+1"
 		print("+1")
- # Emita o sinal collected (criado no início do código)
 	collected.emit()
- # Remova a moeda da cena
+	sprite_2d.visible = false
+	collision_shape_2d.set_deferred("disabled", true)
+	particulas.emitting = true
+	await particulas.finished
 	queue_free()

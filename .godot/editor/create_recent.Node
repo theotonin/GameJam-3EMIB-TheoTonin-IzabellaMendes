@@ -1,8 +1,10 @@
+CharacterBody2D
+GPUParticles2D
+CPUParticles2D
 Node2D
 TileMapLayer
 CollisionShape2D
 Area2D
-GPUParticles2D
 Sprite2D
 AnimationPlayer
 AnimatableBody2D
@@ -11,4 +13,3 @@ TextEdit
 Camera2D
 TextureRect
 AnimatedSprite2D
-CharacterBody2D

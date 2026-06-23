@@ -11,6 +11,5 @@ func _on_body_entered(body):
 	print(body)
 # verifica se o nó que entrou na área tem o método die()
 	if body.has_method("die"):
-		print("achou")
  # chama a função die() desse nó que entrou na área
 		body.die()
