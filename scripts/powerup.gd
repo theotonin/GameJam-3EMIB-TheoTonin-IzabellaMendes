@@ -12,11 +12,6 @@ func _ready():
 # pelo body
 func _on_body_entered(body):
 	if body.name == "player":
-		body.direction = Input.get_axis("left", "right")
-		print(body.direction)
-		if body.direction:
-			body.velocity.x = body.direction * body.SPEED
-		else:
-			body.velocity.x = move_toward(body.velocity.x, 0, body.SPEED)
+		body.isMooving = true
 		collected.emit()
 		queue_free()

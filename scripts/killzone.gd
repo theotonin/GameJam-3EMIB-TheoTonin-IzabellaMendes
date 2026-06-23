@@ -13,3 +13,4 @@ func _on_body_entered(body):
 	if body.has_method("die"):
  # chama a função die() desse nó que entrou na área
 		body.die()
+		GameManager.tentativas += 1

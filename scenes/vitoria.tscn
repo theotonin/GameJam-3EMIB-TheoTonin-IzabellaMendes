@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dke4j3rqphrwa"]
+
+[ext_resource type="Script" uid="uid://dvgv3ifugvlml" path="res://scripts/vitoria.gd" id="1_3oowa"]
+[ext_resource type="Texture2D" uid="uid://cxyvvt8i0t7vg" path="res://assets/Base pack/bg.png" id="1_5w2qk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r4msk"]
+font_size = 32
+
+[node name="Vitoria" type="Control" unique_id=901395440]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3oowa")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=477969861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5w2qk")
+
+[node name="Label" type="Label" parent="." unique_id=1681120254]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+z_index = 2
+layout_mode = 0
+offset_left = 464.0
+offset_top = 270.0
+offset_right = 686.0
+offset_bottom = 315.0
+text = "Você Venceu !!"
+label_settings = SubResource("LabelSettings_r4msk")
+
+[node name="JogarNovamente" type="Button" parent="." unique_id=1558612219]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 312.0
+offset_right = 653.0
+offset_bottom = 352.0
+text = "Jogar novamente"
+
+[connection signal="pressed" from="JogarNovamente" to="." method="_on_jogar_novamente_pressed"]

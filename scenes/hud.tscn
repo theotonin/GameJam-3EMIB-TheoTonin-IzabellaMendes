@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b8yjm84of8aj4"]
+
+[ext_resource type="Script" uid="uid://c62ta8duv6xv8" path="res://scenes/hud.gd" id="1_ahhtf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r4msk"]
+
+[node name="Hud" type="CanvasLayer" unique_id=1900722534]
+script = ExtResource("1_ahhtf")
+
+[node name="Control" type="Control" parent="." unique_id=710063935]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tentativas" type="Label" parent="Control" unique_id=204168621]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 107.0
+offset_bottom = 36.0
+text = "Tentativas: "
+label_settings = SubResource("LabelSettings_r4msk")
+
+[node name="Moedas" type="Label" parent="Control" unique_id=1058964713]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 36.0
+offset_right = 107.0
+offset_bottom = 59.0
+text = "Moedas: "
+
+[node name="Pulos" type="Label" parent="Control" unique_id=957398735]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 59.0
+offset_right = 107.0
+offset_bottom = 82.0
+text = "Pulos: "

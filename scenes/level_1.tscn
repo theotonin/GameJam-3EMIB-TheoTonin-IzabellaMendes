@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bv8d3rbt2lhm8" path="res://scenes/obstaculo_medio.tscn" id="9_7gny6"]
 [ext_resource type="PackedScene" uid="uid://u4ih72v8463n" path="res://scenes/obstaculo_dificil.tscn" id="10_7gny6"]
 [ext_resource type="PackedScene" uid="uid://wlyrklubgmdf" path="res://scenes/powerup.tscn" id="12_2aecg"]
+[ext_resource type="Script" uid="uid://d1sqyb4w38v2l" path="res://scripts/game_manager.gd" id="15_6dial"]
+[ext_resource type="PackedScene" uid="uid://b8yjm84of8aj4" path="res://scenes/hud.tscn" id="16_7nomh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xbjy"]
 texture = ExtResource("2_rus8k")
@@ -4887,24 +4889,6 @@ tile_set = SubResource("TileSet_4nkto")
 tile_map_data = PackedByteArray("AADP/wIAAwAAAAUAAAD7/wIAAwAAAAUAAAAXAAIAAwAAAAUAAABMAAIAAwAAAAUAAABdAAIAAwAAAAUAAACBAAIAAwAAAAUAAAC2AAIAAwAAAAUAAADDAQIAAwADAAIAAACwAAIAAwABAAMAAAAYAQIAAwABAAMAAAAaAQIAAwABAAMAAAA5AQIAAwABAAMAAACVAQIAAwAAAAQAAACNAAIAAwAAAAQAAAAzAAIAAwAAAAQAAABTAQIAAwAAAAMAAADgAAIAAwAAAAMAAADO/97/AwAAAAAAAADS/97/AwABAAAAAADv/+H/AwABAAAAAADr/+H/AwAAAAAAAADZ/+b/AwAAAAEAAADd/+b/AwABAAEAAAAlAOL/AwABAAEAAAAhAOL/AwAAAAEAAAA5ANr/AwAAAAIAAAA9ANr/AwABAAIAAABQAN7/AwABAAIAAABMAN7/AwAAAAEAAABiANz/AwAAAAEAAABmANz/AwABAAAAAACPAOL/AwABAAAAAACLAOL/AwAAAAIAAAB4ANz/AwAAAAIAAAB8ANz/AwABAAIAAADDAOD/AwABAAIAAAC/AOD/AwAAAAEAAAC5AOL/AwAAAAEAAAC9AOL/AwABAAEAAAC/AOL/AwAAAAAAAADDAOL/AwABAAAAAADFAOL/AwABAAAAAADEAOH/AwABAAAAAAC8AOH/AwAAAAEAAAC9AOH/AwAAAAEAAAC+AOD/AwAAAAEAAACnAOP/AwAAAAEAAACrAOP/AwABAAEAAADsAN//AwABAAEAAADoAN//AwAAAAAAAADVAOP/AwAAAAIAAADZAOP/AwABAAIAAAAcAeH/AwABAAAAAAARAd3/AwABAAAAAAAFAen/AwABAAAAAAAYAeH/AwAAAAEAAAANAd3/AwAAAAIAAAABAen/AwAAAAAAAAA6AeX/AwAAAAAAAABLAd3/AwAAAAEAAABPAd3/AwABAAAAAAA+AeX/AwABAAIAAACJAeP/AwABAAIAAACFAeP/AwAAAAEAAAB1Aej/AwABAAAAAABxAej/AwAAAAAAAABoAd7/AwAAAAAAAABsAd7/AwABAAIAAACnAeT/AwABAAIAAADAAdz/AwABAAAAAADgAev/AwABAAAAAAC8Adz/AwAAAAEAAADcAev/AwAAAAIAAACjAeT/AwAAAAIAAADWAev/AwAAAAIAAADaAev/AwABAAEAAACwAeP/AwABAAEAAACsAeP/AwAAAAIAAACpAeT/AwAAAAIAAACtAeT/AwABAAAAAACnAQIAAQAAAAUAAADZAQIAAQAAAAUAAABnAQIAAQAAAAUAAACJAQEAAQAAAAUAAACFAQIAAQAAAAUAAACLAQIAAQAAAAUAAADRAAIAAQAAAAUAAAAcAAIAAQAAAAUAAAA=")
 tile_set = SubResource("TileSet_2aecg")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Tilemap + fundo" unique_id=1596170928]
-modulate = Color(0.13885854, 0.13885854, 0.13885854, 1)
-offset_left = 7100.0
-offset_top = -152.0
-offset_right = 7368.0
-offset_bottom = -96.0
-text = "Parabens!! Você chegou ao fim e venceu o jogo"
-autowrap_mode = 2
-tab_size = 6
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Tilemap + fundo" unique_id=707413527]
-modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-offset_left = -742.0
-offset_top = -142.0
-offset_right = -422.0
-offset_bottom = -56.0
-text = "Apenas pule para vencer, se bater, finge que deu game over"
-
 [node name="Obstaculos" type="Node2D" parent="." unique_id=538136362]
 z_index = 2
 
@@ -4952,7 +4936,7 @@ position = Vector2(1072, -77)
 
 [node name="coin4" parent="Coins e powerups" unique_id=1086499678 instance=ExtResource("2_e3sih")]
 z_index = 5
-position = Vector2(1961, -516)
+position = Vector2(2239, -87)
 
 [node name="coin5" parent="Coins e powerups" unique_id=717905037 instance=ExtResource("2_e3sih")]
 z_index = 5
@@ -4975,7 +4959,7 @@ z_index = 5
 position = Vector2(6045, -78)
 
 [node name="powerup" parent="Coins e powerups" unique_id=795584862 instance=ExtResource("12_2aecg")]
-position = Vector2(-691, 26)
+position = Vector2(1988, -486)
 
 [node name="Plataformas" type="Node2D" parent="." unique_id=1068780969]
 z_index = 2
@@ -4995,3 +4979,8 @@ position = Vector2(7910, 71)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/plataforma" unique_id=290641404]
 libraries/ = SubResource("AnimationLibrary_pa8r4")
 autoplay = &"moving right and left"
+
+[node name="GameManager" type="Node2D" parent="." unique_id=828899527]
+script = ExtResource("15_6dial")
+
+[node name="Hud" parent="." unique_id=1900722534 instance=ExtResource("16_7nomh")]
