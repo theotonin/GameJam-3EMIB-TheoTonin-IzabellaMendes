@@ -17,7 +17,13 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		
+	
+	if Input.is_action_just_pressed("reiniciar"):
+		GameManager.moedas = 0
+		GameManager.pulos = 0
+		GameManager.tentativas = 0
+		get_tree().reload_current_scene()
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and pulos<3:
 		velocity.y = JUMP_VELOCITY

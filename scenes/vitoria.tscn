@@ -37,10 +37,10 @@ label_settings = SubResource("LabelSettings_r4msk")
 
 [node name="JogarNovamente" type="Button" parent="." unique_id=1558612219]
 layout_mode = 0
-offset_left = 483.0
-offset_top = 312.0
-offset_right = 653.0
-offset_bottom = 352.0
+offset_left = 485.0
+offset_top = 319.0
+offset_right = 655.0
+offset_bottom = 359.0
 text = "Jogar novamente"
 
 [connection signal="pressed" from="JogarNovamente" to="." method="_on_jogar_novamente_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://rappicsyjbnu"]
+
+[ext_resource type="Script" uid="uid://cqmec8f4pv13t" path="res://scripts/victory_area.gd" id="1_w28qn"]
+
+[node name="VictoryArea" type="Area2D" unique_id=705123091]
+script = ExtResource("1_w28qn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://u4ih72v8463n" path="res://scenes/obstaculo_dificil.tscn" id="10_7gny6"]
 [ext_resource type="PackedScene" uid="uid://wlyrklubgmdf" path="res://scenes/powerup.tscn" id="12_2aecg"]
 [ext_resource type="Script" uid="uid://d1sqyb4w38v2l" path="res://scripts/game_manager.gd" id="15_6dial"]
+[ext_resource type="PackedScene" uid="uid://rappicsyjbnu" path="res://scenes/victory_area.tscn" id="16_1s4pk"]
 [ext_resource type="PackedScene" uid="uid://b8yjm84of8aj4" path="res://scenes/hud.tscn" id="16_7nomh"]
+[ext_resource type="PackedScene" uid="uid://bp04j40af2rce" path="res://scenes/pause_menu.tscn" id="18_x2xxo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xbjy"]
 texture = ExtResource("2_rus8k")
@@ -4863,6 +4865,9 @@ _data = {
 &"moving right and left": SubResource("Animation_fcfvj")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2xxo"]
+size = Vector2(100, 751)
+
 [node name="level1" type="Node2D" unique_id=709810503]
 
 [node name="player" parent="." unique_id=770361231 instance=ExtResource("1_bswci")]
@@ -4980,7 +4985,15 @@ position = Vector2(7910, 71)
 libraries/ = SubResource("AnimationLibrary_pa8r4")
 autoplay = &"moving right and left"
 
-[node name="GameManager" type="Node2D" parent="." unique_id=828899527]
-script = ExtResource("15_6dial")
+[node name="VictoryArea" parent="." unique_id=705123091 instance=ExtResource("16_1s4pk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VictoryArea" unique_id=1263090711]
+position = Vector2(7225, -310.5)
+shape = SubResource("RectangleShape2D_x2xxo")
 
 [node name="Hud" parent="." unique_id=1900722534 instance=ExtResource("16_7nomh")]
+
+[node name="PauseMenu" parent="." unique_id=1006564208 instance=ExtResource("18_x2xxo")]
+
+[node name="GameManager" type="Node2D" parent="." unique_id=828899527]
+script = ExtResource("15_6dial")

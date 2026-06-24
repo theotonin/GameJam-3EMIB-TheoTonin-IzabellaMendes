@@ -4,7 +4,6 @@ extends CanvasLayer
 @onready var pulos: Label = $Control/Pulos
 @onready var moedas: Label = $Control/Moedas
 
-
 # Quando carregar na cena, chamar a função atualizar_vidas()
 func _ready() -> void:
 	atualizar_tentativas()

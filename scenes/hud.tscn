@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8yjm84of8aj4"]
 
-[ext_resource type="Script" uid="uid://c62ta8duv6xv8" path="res://scenes/hud.gd" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://c62ta8duv6xv8" path="res://scripts/hud.gd" id="1_ahhtf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_r4msk"]
 

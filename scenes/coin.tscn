@@ -27,6 +27,7 @@ texture = ExtResource("2_11l1o")
 
 [node name="Particulas" type="GPUParticles2D" parent="." unique_id=2043418514]
 emitting = false
+amount = 30
 lifetime = 0.4
 one_shot = true
 explosiveness = 1.0

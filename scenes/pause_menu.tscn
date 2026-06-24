@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bp04j40af2rce"]
+
+[ext_resource type="Script" uid="uid://c7n7d3lfvm6vg" path="res://scripts/pause_menu.gd" id="1_n87rw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uahpa"]
+font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n87rw"]
+bg_color = Color(0, 0.6856139, 0.69378275, 1)
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1006564208]
+process_mode = 3
+script = ExtResource("1_n87rw")
+
+[node name="Control" type="Control" parent="." unique_id=695205059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=125900186]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="Label" type="Label" parent="Control" unique_id=1559739628]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 180.0
+offset_right = 621.0
+offset_bottom = 225.0
+text = "Pausado"
+label_settings = SubResource("LabelSettings_uahpa")
+
+[node name="ContinuarButton" type="Button" parent="Control" unique_id=1278115863]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 321.0
+offset_right = 629.0
+offset_bottom = 363.0
+theme_override_colors/font_color = Color(0.0016764245, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")
+text = "Continuar"
+
+[node name="MenuInicialButton" type="Button" parent="Control" unique_id=849894954]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 377.0
+offset_right = 639.0
+offset_bottom = 419.0
+theme_override_colors/font_color = Color(0.0016764245, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_n87rw")
+text = "Menu Inicial"
+
+[connection signal="pressed" from="Control/ContinuarButton" to="." method="_on_continuar_button_pressed"]
+[connection signal="pressed" from="Control/MenuInicialButton" to="." method="_on_menu_inicial_button_pressed"]
